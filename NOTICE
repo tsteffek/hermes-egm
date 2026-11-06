@@ -1,0 +1,14 @@
+Hermes EGM
+Independent implementation, developed with Hermes Agent assistance.
+
+Inspired by the Elephant/Goldfish design-review methodology documented by
+Google's elephant-goldfish-model project:
+https://github.com/google/elephant-goldfish-model (Apache-2.0).
+
+The production code and concise workflow prompts in this repository were authored
+for this implementation; upstream source code, reviewer prompts and artwork are
+not bundled. The Apache-2.0 license text is the standard license, not a claim of
+Google authorship of this implementation.
+
+This is not Google's supported EGM distribution and is not endorsed by Google
+or Nous Research. Product and organization names belong to their respective owners.

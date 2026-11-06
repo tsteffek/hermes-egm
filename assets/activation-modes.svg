@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">When Hermes EGM runs: manual, suggest, or auto</title>
+  <desc id="desc">Manual waits for your review request. Suggest, the default, asks at a substantial design checkpoint and waits for your agreement. Auto is opt-in for an allowed project and enrolled session, with a duplicate check and attempt budget before review. No projects are automatically enabled. These are agent-guided workflows, not a universal permission or spending gate.</desc>
+  <!-- Original repository diagram. Apache-2.0; see ../LICENSE. -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#FFDE1A"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="#0B0C0E"/>
+  <g font-family="DejaVu Sans,sans-serif">
+    <text x="44" y="60" fill="#E5DEC9" font-size="34" font-weight="700">When does a review run?</text>
+    <text x="44" y="97" fill="#A9ADA5" font-size="21">Guidance for the main agent. Your opt-outs and data-sharing rules still apply.</text>
+    <rect x="44" y="133" width="1112" height="112" fill="#15181C" stroke="#62675D"/>
+    <text x="66" y="178" fill="#E5DEC9" font-size="25" font-weight="700">MANUAL</text>
+    <text x="66" y="211" fill="#A9ADA5" font-family="DejaVu Sans Mono,monospace" font-size="16">ON REQUEST</text>
+    <text x="294" y="178" fill="#E5DEC9" font-size="23">You request a review</text>
+    <path d="M581 171H682" stroke="#FFDE1A" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="719" y="178" fill="#E5DEC9" font-size="23">Review the selected text</text>
+    <text x="294" y="214" fill="#A9ADA5" font-size="18">Use the skill by name, or ask in ordinary conversation.</text>
+    <rect x="44" y="263" width="1112" height="112" fill="#191B17" stroke="#FFDE1A"/>
+    <rect x="44" y="263" width="223" height="112" fill="#FFDE1A"/>
+    <text x="66" y="308" fill="#0B0C0E" font-size="25" font-weight="700">SUGGEST</text>
+    <text x="66" y="341" fill="#0B0C0E" font-family="DejaVu Sans Mono,monospace" font-size="16" font-weight="700">DEFAULT</text>
+    <text x="294" y="308" fill="#E5DEC9" font-size="23">Agent suggests</text>
+    <path d="M502 301H559" stroke="#FFDE1A" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="587" y="308" fill="#FFDE1A" font-size="23" font-weight="700">You agree</text>
+    <path d="M736 301H796" stroke="#FFDE1A" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="826" y="308" fill="#E5DEC9" font-size="23">Review starts</text>
+    <text x="294" y="344" fill="#A9ADA5" font-size="18">A substantial draft is ready. No review call before your request.</text>
+    <rect x="44" y="393" width="1112" height="112" fill="#101B36" stroke="#3159F2"/>
+    <text x="66" y="438" fill="#E5DEC9" font-size="25" font-weight="700">AUTO</text>
+    <text x="66" y="471" fill="#9AB0FF" font-family="DejaVu Sans Mono,monospace" font-size="16">PROJECT OPT-IN</text>
+    <text x="294" y="438" fill="#E5DEC9" font-size="22">Project + session + limits</text>
+    <path d="M634 431H690" stroke="#FFDE1A" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="719" y="438" fill="#E5DEC9" font-size="23">Review before implementation</text>
+    <text x="294" y="474" fill="#9AB0FF" font-size="18">New host session after opt-in. One automatic attempt per session by default.</text>
+    <text x="44" y="549" fill="#FFDE1A" font-size="20" font-weight="700">No automatic projects by default.</text>
+    <text x="44" y="579" fill="#A9ADA5" font-size="18">Automatic-only limits are enforced in code. Manual intent is still declared by the agent, not authenticated.</text>
+  </g>
+</svg>

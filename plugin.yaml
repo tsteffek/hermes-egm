@@ -1,0 +1,28 @@
+name: hermes-egm
+version: "0.2.0"
+description: "Fresh-context, tool-free design reviews with checked source evidence and EGM workflow skills."
+author: "William Bohn and Hermes Agent"
+license: Apache-2.0
+requires_hermes: ">=0.22.7"
+provides_tools:
+  - egm_review
+provides_hooks: []
+provides_middleware: []
+requires_env: []
+config_schema:
+  activation:
+    type: str
+    choices: [manual, suggest, auto]
+    default: suggest
+    label: Activation mode
+    description: "Suggest reviews by default. Auto requires an allowed project and a new session."
+  auto_projects:
+    type: list
+    default: []
+    label: Allowed automatic-review projects
+    description: "JSON list of existing absolute project directories. Matches the session's starting workspace, not document provenance. Empty disables automatic review."
+  auto_max_reviews_per_session:
+    type: int
+    default: 1
+    label: Automatic attempts per session
+    description: "Integer 1–3. Admitted failed/cancelled attempts count; automatic duplicates are blocked. Not a monetary limit."

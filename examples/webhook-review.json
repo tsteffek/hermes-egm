@@ -1,0 +1,13 @@
+{
+  "target": "design.md",
+  "documents": [
+    {
+      "id": "design.md",
+      "text": "# Webhook delivery design\nSend every event to the customer URL.\nIf a request fails, retry forever immediately.\nPersist the event only after a successful response.\nGuarantee exactly-once delivery without storing event IDs.\nDo not define a request timeout or a response size limit.\nAcceptance test: one successful delivery."
+    },
+    {
+      "id": "requirements.md",
+      "text": "Events must survive worker crashes.\nCustomer endpoints can fail, be slow, or return a huge response.\nRepeated deliveries must not repeat side effects.\nCustomer URLs are untrusted, and may resolve to internal networks."
+    }
+  ]
+}
