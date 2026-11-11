@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Changed
+
+- The reviewer system prompt now states the full output contract that `validate_findings` enforces locally (finding count, per-field character limits, 1-3 evidence references, and the rule that each quote is copied verbatim from a single supplied line). Previously these limits were only in the validator, so a well-behaved reviewer on strict routes reliably tripped whole-review rejection (`invalid_response`). Validation itself is unchanged and still fails closed.
+
 ### Added
 
 - `review_timeout_seconds` plugin setting (integer 10–3600, default 90) raises the per-reviewer provider timeout and the coroutine deadline (+5s) for slow local models. Invalid values fall back to the default. The timeout is always passed explicitly; omitting it would defer to the host's own default rather than removing the bound.

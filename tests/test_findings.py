@@ -3,7 +3,7 @@
 import unittest
 from copy import deepcopy
 
-from hermes_egm.review import InvalidReview, ReviewRequest, validate_findings
+from hermes_egm.review import SYSTEM_PROMPT, InvalidReview, ReviewRequest, validate_findings
 
 
 def finding():
@@ -33,6 +33,23 @@ class FindingTests(unittest.TestCase):
         self.assertEqual(accepted[0]["lenses"], ["design"])
         self.assertEqual(accepted[0]["evidence"][0]["quote"], "Deliver webhooks.")
         self.assertEqual(raw, before)
+
+    def test_system_prompt_states_the_findings_contract_the_validator_enforces(self) -> None:
+        # validate_findings rejects the WHOLE reviewer result for violating any limit
+        # below; a reviewer cannot conform unless the prompt states them. This test
+        # fails whenever the validator grows a limit the prompt omits (or vice versa).
+        for requirement in (
+            "8 findings",
+            "160",
+            "1000",
+            "600",
+            "1-3 evidence",
+            "400",
+            "character for character",
+            "one single line",
+        ):
+            with self.subTest(requirement=requirement):
+                self.assertIn(requirement, SYSTEM_PROMPT)
 
     def test_invalid_findings_fail_closed_without_optional_jsonschema(self) -> None:
         raw = finding()
