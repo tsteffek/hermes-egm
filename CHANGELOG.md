@@ -4,7 +4,7 @@
 
 ### Changed
 
-- The reviewer system prompt now states the full output contract that `validate_findings` enforces locally (finding count, per-field character limits, 1-3 evidence references, and the rule that each quote is copied verbatim from a single supplied line). Previously these limits were only in the validator, so a well-behaved reviewer on strict routes reliably tripped whole-review rejection (`invalid_response`). Validation itself is unchanged and still fails closed.
+- The reviewer system prompt now states the full output contract that `validate_findings` enforces locally (the one-object-with-`findings`-key envelope, exact finding and evidence key sets, severity values, finding count, per-field character limits, and the rule that each quote is copied verbatim from a single supplied line). Previously these limits were only in the validator, so a well-behaved reviewer on strict routes reliably tripped whole-review rejection (`invalid_response`). Validation itself is unchanged and still fails closed.
 
 ### Added
 

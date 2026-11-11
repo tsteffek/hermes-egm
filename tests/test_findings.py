@@ -39,6 +39,11 @@ class FindingTests(unittest.TestCase):
         # below; a reviewer cannot conform unless the prompt states them. This test
         # fails whenever the validator grows a limit the prompt omits (or vice versa).
         for requirement in (
+            'only key is "findings"',
+            "bare array",
+            "exactly the keys severity",
+            "blocker, major, minor",
+            "exactly the keys document",
             "8 findings",
             "160",
             "1000",
