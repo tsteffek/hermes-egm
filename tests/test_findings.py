@@ -49,7 +49,7 @@ class FindingTests(unittest.TestCase):
             "1000",
             "600",
             "1-3 evidence",
-            "400",
+            "quote, nonempty and at most 400 characters",
             "character for character",
             "one single line",
         ):
